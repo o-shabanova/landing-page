@@ -7,19 +7,19 @@
     --clr-orange-gradienyt: rgba(245, 194, 146, 100%);
 
     --ff-primary: "Righteous", sans-serif;
-    --ff-body: var(--ff-primary);
-    --ff-heading: var(--ff-primary);
+    --ff-text: "Ubuntu", sans-serif;
 
-    /*1rem by ddefault is 16px, but in general it can have another value*/;
+
+    /*1rem by default is 16px, but in general it can have another value*/;
     --inner-text: 1.125rem;
     --inner-smal: 1rem;
     --title: 1.5rem;
     --button: 1.25rem;
     --button-small: 1rem;
-    --header-1: 4, 375rem;
+    --header-1: 4.375rem;
     --header-2: 3rem;
     --header-3: 2.25rem;
-    --subheader: 2, 125px;
+    --subheader: 2.125px;
 }
 
 /* Box sizing rules */
@@ -58,9 +58,11 @@ body {
     line-height: 1.5;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
+/* elements that don't have a class get default styles */
+a {
     text-decoration-skip-ink: auto;
+    color: inherit; /* Inherits the color from the parent element */
+    text-decoration: none;
 }
 
 /* Make images easier to work with */
@@ -86,4 +88,64 @@ svg {
         scroll-behavior: auto !important;
     }
 }
+
+/*general styling*/
+body {
+    font-family: var(--ff-primary);
+    font-size: 1rem;
+    background-color: var(--clr-background);
+    color: var(--clr-white);
+}
+
+.wrapper {
+    --max-width: 1250px;
+    --padding: 1rem;
+
+    width: min(var(--max-width),100% - (var(--padding) *2));
+    /*centered our elements*/
+    margin-inline: auto;
+
+
+}
+
+.smaller-section {
+    --max-width: 1140px;
+    --padding: 1rem;
+
+    width: min(var(--max-width),100% - (var(--padding) *2));
+    margin-inline: auto;
+}
+
+.container {
+    display: grid;
+    gap: 1rem;
+}
+
+@media (min-width: 50em) {
+    .container.even-column {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+
+    .bottom-109 {
+        margin-bottom: 109px;
+    }
+}
+
+.header-one {
+    font-size: var(--header-1);
+}
+
+.header-two {
+
+}
+
+.inner-text {
+    font-family: var(--ff-text);
+}
+
+.purple {
+    background-color: var(--clr-main-purple);
+}
+
 
