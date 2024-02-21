@@ -188,6 +188,7 @@ body {
 
 .gallery-item.purple {
     border-radius: 3%;
+    margin-bottom: 5px;
 }
 
 .gallery-item.one { grid-area: 1 / 1 / 2 / 2; }
@@ -201,9 +202,9 @@ body {
     height: 100%;
     object-fit: cover;
 }
-.gallery-item {
-}
 /*cta-section*/
+
+
 /*footer*/
 hr {
     border: 1px solid var(--clr-main-orange);
