@@ -1,0 +1,183 @@
+:root {
+    --clr-background: #1A173D;
+    --clr-main-purple: #5133A6;
+    --clr-main-orange: #E25300;
+    --clr-white: #fff;
+    --clr-purple-gradient: rgb(102, 44, 187, 67%);
+    --clr-orange-gradienyt: rgba(245, 194, 146, 100%);
+
+    --ff-primary: "Righteous", sans-serif;
+    --ff-text: "Ubuntu", sans-serif;
+
+
+    /*1rem by default is 16px, but in general it can have another value*/;
+    --inner-text: 1.125rem;
+    --inner-smal: 1rem;
+    --title: 1.5rem;
+    --button: 1.25rem;
+    --button-small: 1rem;
+    --header-1: 4.375rem;
+    --header-2: 3rem;
+    --header-3: 2.25rem;
+    --subheader: 2.125rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* elements that don't have a class get default styles */
+a {
+    text-decoration-skip-ink: auto;
+    color: inherit; /* Inherits the color from the parent element */
+    text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/*general styling*/
+body {
+    font-family: var(--ff-primary);
+    font-size: 1rem;
+    background-color: var(--clr-background);
+    color: var(--clr-white);
+}
+
+.wrapper {
+    --max-width: 1250px;
+    --padding: 1rem;
+
+    width: min(var(--max-width),100% - (var(--padding) *2));
+    /*centered our elements*/
+    margin-inline: auto;
+
+
+}
+
+.smaller-section {
+    --max-width: 1140px;
+    --padding: 1rem;
+
+    width: min(var(--max-width),100% - (var(--padding) *2));
+    margin-inline: auto;
+}
+
+.container {
+    display: grid;
+    gap: 1rem;
+}
+
+@media (min-width: 50em) {
+    .container.even-column {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+
+    .bottom-109 {
+        margin-bottom: 109px;
+    }
+
+}
+
+
+.header-one {
+    font-size: var(--header-1);
+}
+
+.header-two {
+    font-size: var(--header-2);
+}
+
+.inner-text {
+    font-family: var(--ff-text);
+    font-size: var(--inner-text);
+}
+
+.inner-small {
+    font-family: var(--ff-text);
+    font-size: var(--inner-smal);
+}
+
+.purple {
+    background-color: var(--clr-main-purple);
+}
+
+.button {
+    font-size: var(--button);
+}
+
+.title {
+    font-size: var(--title);
+}
+
+.subheader {
+    font-size: var(--subheader);
+}
+
+/*educator-section*/
+/*review-section*/
+/*academy`s opportunity section*/
+
+/*gallery-section*/
+/*cta-section*/
+/*footer*/
+hr {
+    border: 1px solid var(--clr-main-orange);
+    width: 90%;
+    margin: 0 auto;
+}
+
