@@ -19,7 +19,7 @@
     --header-1: 4.375rem;
     --header-2: 3rem;
     --header-3: 2.25rem;
-    --subheader: 2.125px;
+    --subheader: 2.125rem;
 }
 
 /* Box sizing rules */
@@ -130,22 +130,54 @@ body {
     .bottom-109 {
         margin-bottom: 109px;
     }
+
 }
+
 
 .header-one {
     font-size: var(--header-1);
 }
 
 .header-two {
-
+    font-size: var(--header-2);
 }
 
 .inner-text {
     font-family: var(--ff-text);
+    font-size: var(--inner-text);
+}
+
+.inner-small {
+    font-family: var(--ff-text);
+    font-size: var(--inner-smal);
 }
 
 .purple {
     background-color: var(--clr-main-purple);
 }
 
+.button {
+    font-size: var(--button);
+}
+
+.title {
+    font-size: var(--title);
+}
+
+.subheader {
+    font-size: var(--subheader);
+}
+
+/*educator-section*/
+/*review-section*/
+/*academy`s opportunity section*/
+
+/*gallery-section*/
+/*cta-section*/
+/*footer*/
+hr {
+    border: 1px solid var(--clr-main-orange);
+    width: 90%;
+    margin: 0 auto;
+}
 
