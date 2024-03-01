@@ -222,7 +222,11 @@ h2[data-width="wide"] {
     height: 410px;
     background-color: var(--clr-main-purple);
     border-radius: 24px;
-    /*transform: skewY(10deg);*/
+    transform: skewY(10deg);
+}
+
+.item-back-rotate {
+    transform: skewY(-10deg);
 }
 
 .explore.purple {
