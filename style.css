@@ -228,6 +228,7 @@ h2[data-width="wide"] {
 .opportunitie-p {
     margin-bottom: 136px;
 }
+
 .oportunities-paragraph {
     transform: skewY(-10deg);
     display: flex;
@@ -263,6 +264,40 @@ p[data-width="wide"] {
 
 .explore.orange {
     background-color: var(--clr-main-orange);
+}
+
+@media (max-width: 48em) {
+    .explore-cats {
+        display: flex;
+        flex-direction: column;
+        flex-basis: auto;
+    }
+
+    .explore-cats > div {
+        margin-top: 49px;
+    }
+
+    .explore-cats > div:last-child {
+        margin-bottom: 61px;
+    }
+
+    .explore {
+        max-width: 100%;
+        height: 265px;
+        border-radius: 24px;
+        transform: skewY(10deg);
+        padding: 0 20px;
+    }
+    .opportunitie-p {
+        margin-bottom: 49px;
+    }
+
+    .oportunities-paragraph {
+        transform: skewY(-10deg);
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        /*justify-content: flex-start;*/
+    }
 }
 /*gallery-section*/
 .header-container {
