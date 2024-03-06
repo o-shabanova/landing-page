@@ -3,8 +3,8 @@
     --clr-main-purple: #5133A6;
     --clr-main-orange: #E25300;
     --clr-white: #fff;
-    --clr-purple-gradient: rgb(102, 44, 187, 67%);
-    --clr-orange-gradienyt: rgba(245, 194, 146, 100%);
+    --clr-purple-gradient:  linear-gradient(rgb(133, 100, 187) 0%, rgb(102, 44, 197) 85%);
+    --clr-orange-gradient: radial-gradient(rgb(245, 194, 146) 25%, rgb(241, 150, 65) 85%);
 
     --ff-primary: "Righteous", sans-serif;
     --ff-text: "Ubuntu", sans-serif;
@@ -219,10 +219,12 @@ h2[data-width="wide"] {
     flex: 1 1 auto;
 }
 .explore {
-    /*max-width: 345px;*/
-    height: 410px;
+    min-width: 345px;
+    min-height: 370px;
+    /*min-height: 370px;*/
+    height: auto;
     border-radius: 24px;
-    transform: skewY(10deg);
+    transform: skewY(8deg);
     padding: 0 20px;
 }
 .opportunitie-p {
@@ -230,7 +232,7 @@ h2[data-width="wide"] {
 }
 
 .oportunities-paragraph {
-    transform: skewY(-10deg);
+    transform: skewY(-8deg);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -249,28 +251,34 @@ p[data-width="wide"] {
 }
 
 .explore img {
-    transform: skewY(-10deg);
+    transform: skewY(-8deg);
     margin: 0 auto;
 }
 
 .explore img {
+    max-width: 100%;
+    height: auto;
+
     position: relative;
     margin-top: -130px;
 }
 
 .explore.purple {
-    background-color: var(--clr-main-purple);
+    background: var(--clr-purple-gradient);
 }
 
 .explore.orange {
-    background-color: var(--clr-main-orange);
+    background:  var(--clr-orange-gradient);
+    color: var(--clr-main-purple);
 }
 
-@media (max-width: 48em) {
+/*1110px - breakpoint*/
+@media (max-width: 50em) {
     .explore-cats {
         display: flex;
         flex-direction: column;
-        flex-basis: auto;
+        /*flex-basis: auto;*/
+        align-items: center;
     }
 
     .explore-cats > div {
@@ -282,22 +290,38 @@ p[data-width="wide"] {
     }
 
     .explore {
-        max-width: 100%;
-        height: 265px;
+        position: relative;
+        width: 565px;
+        /*max-width: 100%;*/
+        min-height: 235px;
         border-radius: 24px;
-        transform: skewY(10deg);
-        padding: 0 20px;
+        transform: skewY(5deg);
+        padding-left: 30px;
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    .explore img {
+        position: absolute;
+        top: 50px;
+        right: -98px;
+        max-width: 100%;
+        height: auto;
+        transform: skewY(-5deg);
     }
     .opportunitie-p {
         margin-bottom: 49px;
     }
 
     .oportunities-paragraph {
-        transform: skewY(-10deg);
-        /*display: flex;*/
-        /*flex-direction: column;*/
-        /*justify-content: flex-start;*/
+        transform: skewY(-5deg);
     }
+
+    p[data-width="wide"] {
+        max-width: 374px;
+    }
+
 }
 /*gallery-section*/
 .header-container {
