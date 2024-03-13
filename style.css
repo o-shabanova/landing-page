@@ -254,6 +254,7 @@ h2[data-width="wide"] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /*align-items: flex-start;*/
 }
 
 .oportunities-paragraph h3 {
@@ -265,6 +266,7 @@ h2[data-width="wide"] {
 
 p[data-width="wide"] {
     max-width: 300px;
+    /*max-width: 65%;*/
 }
 
 .explore img {
@@ -307,9 +309,14 @@ p[data-width="wide"] {
 
     .explore {
         position: relative;
-        min-width: 565px;
+        /*min-width: 565px;*/
+        /*min-height: 235px;*/
+        /*height: 100%;*/
+        width: 100%; /* Use 100% width for full responsiveness */
+        max-width: 565px; /* Set a maximum width */
         min-height: 235px;
-        height: 100%;
+        height: auto;
+
         border-radius: 24px;
         transform: skewY(5deg);
         padding-left: 30px;
@@ -322,7 +329,8 @@ p[data-width="wide"] {
         position: absolute;
         top: 50px;
         right: -98px;
-        max-width: 100%;
+        /*max-width: 100%;*/
+        width: auto;
         height: auto;
         transform: skewY(-5deg);
     }
@@ -333,13 +341,21 @@ p[data-width="wide"] {
 
     .oportunities-paragraph {
         transform: skewY(-5deg);
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .oportunities-paragraph h3 {
+        align-self: center;
     }
 
     p[data-width="wide"] {
-        max-width: 374px;
+        max-width: 70%;
     }
 
 }
+
 
 @media (max-width: 25em) {
     .opportunitie-p {
@@ -384,12 +400,17 @@ p[data-width="wide"] {
     .oportunities-paragraph h3 {
         margin-top: 70px;
     }
+
     h3.subheader {
         font-size: var(--button);
     }
 
     p.inner-text {
         font-size: var(--inner-smal);
+    }
+
+    p[data-width="wide"] {
+        max-width: 300px;
     }
 
 }
