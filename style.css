@@ -357,8 +357,7 @@ h2[data-width="wide"] {
     .container.educator {
         flex-direction: column;
         align-items: center;
-        /*margin-top: 90px;*/
-        margin-top: 0px;
+        margin-top: 0;
     }
 
     .educator-wrapper {
@@ -391,32 +390,14 @@ h2[data-width="wide"] {
         order: 1;
         max-width: 200px;
         height: auto;
-        /*transform: translate(10px, 80px);*/
     }
 
 
 
 }
 
-/*.educator.inner-text::before {*/
-/*    display: inline-block;*/
-/*    content: url('img/image 3.svg'); !* Insert your Base64-encoded SVG here *!*/
-/*    width: 80px;*/
-/*    height: 80px;*/
-/*    margin-right: 52px; !* Adjust the space between the SVG icon and the text *!*/
-/*    vertical-align: middle;*/
-/*}*/
-/*.educator-image,*/
-/*.cta-image {*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    object-fit: cover;*/
-/*}*/
-
 /*review-section*/
 .review-section {
-    /*display: flex;*/
-    /*flex-direction: row;*/
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
@@ -438,15 +419,26 @@ h2[data-width="wide"] {
     justify-items: center;
 }
 
+.students-review {
+    display: flex;
+    flex-direction: column;
+}
 .students-review__list {
     list-style: none;
     display: flex; /* Display slides in a row */
-    overflow: hidden; /* Hide the non-active slides */
 }
+
 .students-review__list-item {
-    flex: 0 0 100%; /* Each slide takes full width */
-    /*opacity: 0;*/
-    transition: opacity 0.5s ease;
+    flex: 0 0 100%;
+    display: none;
+
+    /*display: flex;*/
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 20px;
+    align-items: center;
+
+
 }
 
 /* Hide the radio buttons */
@@ -455,6 +447,9 @@ input[type="radio"] {
     visibility: hidden;
 }
 /* Style navigation dots */
+.carousel-dots {
+    align-self: center;
+}
 .carousel-dots label {
     display: inline-block;
     width: 10px;
@@ -470,29 +465,16 @@ input#slide2:checked ~ .carousel-dots label:nth-child(2),
 input#slide3:checked ~ .carousel-dots label:nth-child(3) {
     background-color: #000; /* Active dot color */
 }
+
 /* Show the slide associated with the checked radio button */
 input#slide1:checked ~ .students-review__list .students-review__list-item:nth-child(1),
 input#slide2:checked ~ .students-review__list .students-review__list-item:nth-child(2),
 input#slide3:checked ~ .students-review__list .students-review__list-item:nth-child(3) {
-    opacity: 1;
-}
-/*.carousel {*/
-/*    display: flex;*/
-/*}*/
-
-/*.carousel > * {*/
-/*    width: 100%;*/
-/*    flex: 0 0 auto;*/
-/*}*/
-.students-review__list {
-    list-style-type: none;
-}
-.students-review__list-item {
+    /*opacity: 1;*/
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
+
+
 /*academy`s opportunity section*/
 .explore-cats {
     display: flex;
