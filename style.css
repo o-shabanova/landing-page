@@ -412,6 +412,7 @@ h2[data-width="wide"] {
 /*    height: 100%;*/
 /*    object-fit: cover;*/
 /*}*/
+
 /*review-section*/
 .review-section {
     /*display: flex;*/
@@ -437,7 +438,60 @@ h2[data-width="wide"] {
     justify-items: center;
 }
 
-.students-review {
+.students-review__list {
+    list-style: none;
+    display: flex; /* Display slides in a row */
+    overflow: hidden; /* Hide the non-active slides */
+}
+.students-review__list-item {
+    flex: 0 0 100%; /* Each slide takes full width */
+    /*opacity: 0;*/
+    transition: opacity 0.5s ease;
+}
+
+/* Hide the radio buttons */
+input[type="radio"] {
+    position: absolute;
+    visibility: hidden;
+}
+/* Style navigation dots */
+.carousel-dots label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+}
+/* Highlight the dot associated with the checked radio button */
+input#slide1:checked ~ .carousel-dots label:nth-child(1),
+input#slide2:checked ~ .carousel-dots label:nth-child(2),
+input#slide3:checked ~ .carousel-dots label:nth-child(3) {
+    background-color: #000; /* Active dot color */
+}
+/* Show the slide associated with the checked radio button */
+input#slide1:checked ~ .students-review__list .students-review__list-item:nth-child(1),
+input#slide2:checked ~ .students-review__list .students-review__list-item:nth-child(2),
+input#slide3:checked ~ .students-review__list .students-review__list-item:nth-child(3) {
+    opacity: 1;
+}
+/*.carousel {*/
+/*    display: flex;*/
+/*}*/
+
+/*.carousel > * {*/
+/*    width: 100%;*/
+/*    flex: 0 0 auto;*/
+/*}*/
+.students-review__list {
+    list-style-type: none;
+}
+.students-review__list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 /*academy`s opportunity section*/
 .explore-cats {

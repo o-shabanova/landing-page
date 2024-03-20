@@ -114,8 +114,41 @@
                     </div>
                 </div>
                 <div class="students-review">
-                    <!--Carousel-->
-                    Carousel
+<!--                     Radio buttons for navigation -->
+                    <input type="radio" name="slider" id="slide1" checked>
+                    <input type="radio" name="slider" id="slide2">
+                    <input type="radio" name="slider" id="slide3">
+
+                    <ul class="students-review__list carousel">
+                        <li class="students-review__list-item">
+                            <img src="img/avatar1.png" alt="avatar-of-user">
+                            <div>
+                                <h6 class="title">John Doe</h6>
+                                <p class="inner-small">It was really cool experience, I love Bulka so much!</p>
+                            </div>
+                        </li>
+                        <li class="students-review__list-item">
+                            <img src="img/avatar-2.png" alt="avatar-of-user">
+                            <div>
+                                <h6 class="title">Sarah Smith</h6>
+                                <p class="inner-small">I’ve really enjoyed the lessons and the videos are so fun! I’ll recommend it to my friends!</p>
+                            </div>
+                        </li>
+                        <li class="students-review__list-item">
+                            <img src="img/avatar-3.png" alt="avatar-of-user">
+                            <div>
+                                <h6 class="title">Sam Kollins</h6>
+                                <p class="inner-small">Every day I’m trying to find some time and watch few lessons. It’s hilarious!</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- Navigation Dots -->
+                    <div class="carousel-dots">
+                        <label for="slide1" class="dot"></label>
+                        <label for="slide2" class="dot"></label>
+                        <label for="slide3" class="dot"></label>
+                    </div>
                 </div>
             </div>
         </section>
