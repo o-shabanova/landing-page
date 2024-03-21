@@ -438,7 +438,6 @@ h2[data-width="wide"] {
     column-gap: 20px;
     align-items: center;
 
-
 }
 
 /* Hide the radio buttons */
@@ -474,6 +473,63 @@ input#slide3:checked ~ .students-review__list .students-review__list-item:nth-ch
     display: flex;
 }
 
+@media (max-width: 50em) {
+    .review-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        height: 390px;
+        padding: 37px 30px;
+    }
+
+    .students-data {
+        border-right: none;
+        border-bottom: 2px solid white; /* White vertical line */
+        padding-bottom: 38px;
+
+    }
+
+    .students-review {
+        margin: 20px 20.5px 32px;
+    }
+
+    .students-review__list-item {
+        justify-content: start;
+    }
+}
+
+@media (max-width: 25em) {
+    .review-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        max-height: 396px;
+        padding: 32px 25px 23px;
+    }
+
+    h6.title,
+    span.title {
+        font-size: var(--button);
+    }
+
+    h6.title {
+        margin-bottom: 9px;
+    }
+
+    .counter {
+        font-size: var(--title);
+    }
+
+    .students-review {
+        margin: 0;
+        justify-content: space-between;
+    }
+
+    .students-avatar {
+        width: 50px;
+        height: 50px;
+        align-self: start;
+    }
+}
 
 /*academy`s opportunity section*/
 .explore-cats {
