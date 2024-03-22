@@ -462,7 +462,7 @@ input[type="radio"] {
 input#slide1:checked ~ .carousel-dots label:nth-child(1),
 input#slide2:checked ~ .carousel-dots label:nth-child(2),
 input#slide3:checked ~ .carousel-dots label:nth-child(3) {
-    background-color: #000; /* Active dot color */
+    background-color: var(--clr-main-orange); /* Active dot color */
 }
 
 /* Show the slide associated with the checked radio button */
@@ -478,7 +478,7 @@ input#slide3:checked ~ .students-review__list .students-review__list-item:nth-ch
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         width: 100%;
-        height: 390px;
+        min-height: 390px;
         padding: 37px 30px;
     }
 
@@ -519,6 +519,32 @@ input#slide3:checked ~ .students-review__list .students-review__list-item:nth-ch
         font-size: var(--title);
     }
 
+    .students-data {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);/* Three equal columns for students, lessons, and likes */
+        align-items: center;
+        justify-items: normal;
+        padding-bottom: 20px;
+    }
+
+    .students-data__item {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    .item1 {
+        order:2;
+        justify-self: flex-start;
+    }
+    .item2 {
+        order: 1;
+        justify-self: flex-start;
+
+    }
+    .item3 {
+        order: 3;
+        justify-self: flex-end;
+    }
     .students-review {
         margin: 0;
         justify-content: space-between;
