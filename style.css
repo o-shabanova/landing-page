@@ -96,12 +96,16 @@ body {
     background-color: var(--clr-background);
     color: var(--clr-white);
     line-height: normal;
+    /*cursor: url("img/cursor.png"), auto;*/
 }
 
 h2[data-width="wide"] {
     max-width: 744px;
 }
 
+a:hover, button:hover, .interactive:hover {
+    cursor: url("img/cursor.png"), pointer;
+}
 .wrapper {
     --max-width: 1250px;
     --padding: 1rem;
@@ -110,18 +114,17 @@ h2[data-width="wide"] {
     /*centered our elements*/
     margin-inline: auto;
 
-
 }
 
-.section {
-    --max-width: 1170px;
-    --padding: 1rem;
+/*.section {*/
+/*    --max-width: 1170px;*/
+/*    --padding: 1rem;*/
 
-    width: min(var(--max-width),100% - (var(--padding) *2));
-    /*centered our elements*/
-    margin-inline: auto;
+/*    width: min(var(--max-width),100% - (var(--padding) *2));*/
+/*    !*centered our elements*!*/
+/*    margin-inline: auto;*/
 
-}
+/*}*/
 
 .smaller-section {
     --max-width: 1064px;
@@ -287,7 +290,65 @@ h2[data-width="wide"] {
     }
 }
 
+/*header*/
+.header-wrapper {
+    min-height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 51px;
+}
 
+.header-logo {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.header-three {
+    font-size: var(--header-3);
+    color: var(--clr-main-orange);
+}
+
+/*.header-navigation {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    align-items: center;*/
+/*}*/
+
+.primary-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.primary-nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 30px;
+    align-items: center;
+}
+/*.nav-link {*/
+/*    cursor: pointer;*/
+/*}*/
+/*.nav-link:hover {*/
+/*    text-decoration: underline 4px;*/
+/*    text-decoration-color: var(--clr-main-orange);*/
+/*}*/
+
+.nav-link {
+    cursor: pointer;
+    text-decoration: none; /* Remove the default underline */
+    padding-bottom: 5px; /* Adjust the space between the text and the underline */
+    border-bottom: 4px solid transparent; /* Prepare a transparent border */
+}
+
+.nav-link:hover {
+    border-bottom-color: var(--clr-main-orange); /* Show the underline on hover */
+}
+
+
+/*sections*/
 /*educator-section*/
 .container.educator {
     display: flex;
