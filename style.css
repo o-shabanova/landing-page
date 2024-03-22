@@ -1089,13 +1089,12 @@ p.cta.small {
         padding: 16px 47px;
     }
 
-    /*.footer-nav {*/
-    /*    width: 100%;*/
-    /*}*/
+    .footer-nav {
+        width: 100%;
+    }
 
     .footer-nav--list {
-        column-gap: 97px;
-        /*justify-content: space-between;*/
+        justify-content: space-between;
     }
 }
 
